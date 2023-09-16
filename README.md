@@ -1,4 +1,5 @@
-# 如何保持快乐
+# 变得快乐需要几步？
+> 需要三步
 
 第一步，先把自己new出来
 
@@ -12,7 +13,7 @@ Person mx = new Person();
 mx.setHappy(true);
 ```
 
-第三点，使得自己保持住
+第三步，使得自己保持住
 
 ```
 mx.keepHappy();
