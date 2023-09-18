@@ -229,7 +229,7 @@ mx.goTo("微信");
 String captcha=mx.getWXCaptcha();
 mx.keyInput(Device.COMPUTER,captcha);
 ```
-如何快速的备课
+# 如何快速的备课
 
 先找到b站视频链接
 
