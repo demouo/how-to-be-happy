@@ -122,3 +122,110 @@ mx.abandonInterference(Interference.ALL);
 // mx.relax();
 
 ```
+
+# 如何知道一家美食店好不好吃
+
+先到店
+
+```java
+mx.goTo("美食店");
+```
+
+打开手机便签，输入“这家店好吃吗？”，配上表情包
+
+```java
+NoteWriteStream nws = mx.open(Device.PHONE,App.NOTE,"w");
+nws.write("这家店好吃吗？*emoji-question*");
+```
+
+礼貌地敲店面橱窗，把手机给里面吃饭的人看，寻求回复
+
+```java
+mx.knock(Store.WINDOW,AskMode.POLITE);
+mx.showPhoneAndWait();
+/*
+ ** After getting reply, we should thank strangers we ask.
+*/
+```
+
+# 如何快速完成作业
+
+打开chatgpt网页
+
+```java
+mx.open(Device.COMPUTER,Web.CHATGPT);
+```
+
+输入作业问题
+
+```java
+mx.keyInput(Device.COMPUTER,Question.HOMEWORK);
+```
+
+获取g哥的解析然后cv
+
+```java
+mx.cvWith(Web.CHATGPT,Reply.TEXT);
+```
+
+# 如何在教室吃早餐
+
+先把早餐包（看你喜欢，麦麦早餐也可以的）拿到教室
+
+```java
+mx.goTo("classroom",Breakfast.BREAD);
+```
+
+打开电脑
+
+```java
+mx.open(Device.COMPUTER);
+```
+
+一边开电脑一边吃东西
+
+```java
+mx.eat(Breakfast.BREAD);
+```
+
+# 如何为大家提供有意义的信息
+
+首先确保自己是乐于助人的
+
+```java
+mx.setHelping(true);
+```
+
+来到班群、年级群
+
+```java
+mx.goTo(Qq.GROUP);
+```
+
+发送有意义的信息
+
+```java
+mx.sendMessage(Message.MEANING);
+```
+
+# 如何快速登录校园统一登录
+
+首先打开电脑统一登录网页
+
+```java
+mx.open(Device.COMPUTER,Web.SCUT);
+```
+
+调取Google记住的密码
+
+```java
+mx.fetchInput(Device.COMPUTER,Brower.GOOGLE);
+```
+
+oh no本来是为了方便才调用一键登录的，没想到还要调取企业微信验证码呢！安全性真好
+
+```java
+mx.goTo("微信");
+String captcha=mx.getWXCaptcha();
+mx.keyInput(Device.COMPUTER,captcha);
+```
